@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(193, 232, 245);
+    color: blue;
+}
+
+h1{
+    color: rgb(123, 9, 119);
+background-color: rgb(255, 206, 245);
+font-size: 100px;
+font-family: 'Courier New', Courier, monospace;
+letter-spacing: 10px;
+
+}
+
+h2{
+    color: rgb(246, 171, 171);
+}
+
+h3{
+    color: green;
+}
+
+p{
+    color: rgb(255, 146, 195);
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: normal;
+}
