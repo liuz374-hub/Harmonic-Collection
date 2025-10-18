@@ -2,56 +2,78 @@
 <html lang="en">
 
 <head>
-  <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="https://glitch.com/favicon.ico" />
-
-  <!--
-      This is the page head - it contains info the browser uses
-      Like the title, which appears on the browser tab but not inside the page
-      Further down you'll see the content that displays in the page
-    -->
-  <title>Hello</title>
-
-  <!-- The website stylesheet -->
-  <link rel="stylesheet" href="style1.css">x
-  <!-- The website JavaScript file -->
-  <script src="/script.js" defer></script>
-
-  <!-- <style>
-    h1{
-       background-color: yellow;
-       font-size: 120px;
-       font-family: 'Courier New', Courier, monospace;
-       letter-spacing: 100px;
+  <title>Coral Bleaching</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: Arial, sans-serif;
+      color: #880e4f;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      min-height: 100vh;
     }
-    p{
-      color: #d5a6bd;  
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 6px #d81b60;
     }
-  </style> -->
+
+    .content-box {
+      max-width: 600px;
+      background: #fff0f5;
+      padding: 25px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(216, 27, 96, 0.3);
+      border: 3px solid #d81b60;
+      color: #4a0033;
+      font-size: 1.15em;
+      line-height: 1.6;
+    }
+
+    .content-box i {
+      display: block;
+      margin-bottom: 15px;
+      font-style: italic;
+      color: #aa3d6f;
+      text-align: center;
+    }
+
+    a {
+      color: #d81b60;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Coral reef bleaching</h1>
-  <blockquote><i>
-      <pre>From Wikipedia, the free encyclopedia</pre>
-    </i></blockquote>
-  <p>
-    Coral <b>bleaching</b> is the process when corals become white due to loss of symbiotic algae and photosynthetic pigments.  <b>This loss</b> (<a
-      href="https://en.wikipedia.org/wiki/Coral_bleaching">Coral bleaching</a>  of pigment can be caused by various stressors, such as changes in water temperature, light, salinity, or nutrients. A <b>balanced</b> of <b>coral is not necessarily dead</b>;
-    and some corals may survive.[3] However, a bleached coral is under stress, more vulnerable to starvation and disease, and at risk of death.[4][3] The leading cause of coral bleaching is rising ocean temperatures due to climate change.[5][6]
-  </p>
+  <h1>Coral Bleaching</h1>
 
+  <div class="content-box">
+    <i>From Wikipedia, the free encyclopedia</i>
 
-  <h2 style="color: brown;">Coral</h2>
-  <h3>Coral</h3>
-  <h4>Coral</h4>
+    <p>
+      Coral bleaching happens when corals lose the tiny algae that live inside them. These algae give corals their color and food. When the water gets too warm or polluted, corals become stressed and turn white.
+    </p>
 
+    <p>
+      Bleached corals are weak and can die if conditions don’t improve.
+    </p>
+
+    <p>
+      <a href="https://en.wikipedia.org/wiki/Coral_bleaching" target="_blank">Learn more about Coral Bleaching</a>
+    </p>
+  </div>
 </body>
 
 </html>
