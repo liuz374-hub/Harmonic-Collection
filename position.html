@@ -2,141 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Position Demo - Coral Bleaching</title>
+  <title>Pure HTML + CSS Click to Show Content</title>
   <style>
-    body {
-      background-color: #ffe6f0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    /* Hide the checkbox */
+    #toggle {
+      display: none;
     }
-    .parent {
-      position: relative;
-      width: 400px;
-      height: 200px;
-      background: linear-gradient(135deg, #f8bbd0, #f48fb1);
-      border-radius: 20px;
-      box-shadow: 0 8px 15px rgba(216, 27, 96, 0.3);
-      color: #880e4f;
-      font-size: 1.8rem;
-      font-weight: 600;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    .child-button {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
+    /* Style the label as a button */
+    label {
       background-color: #d81b60;
       color: white;
       padding: 10px 15px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(216, 27, 96, 0.5);
+      cursor: pointer;
+      user-select: none;
       font-weight: 700;
       font-size: 1rem;
-      border: none;
-      cursor: pointer;
-      user-select: none;
+      display: inline-block;
+      margin-top: 20px;
       transition: background-color 0.3s ease;
     }
-    .child-button:hover {
+    label:hover {
       background-color: #ec407a;
     }
-    /* Modal styles */
-    .modal {
-      display: none; /* hidden by default */
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0,0,0,0.5);
-      backdrop-filter: blur(3px);
-      justify-content: center;
-      align-items: center;
-    }
-    .modal-content {
-      background-color: #fff0f5;
-      padding: 30px 40px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px #ff80ab;
-      max-width: 400px;
-      text-align: center;
+    /* Hidden content by default */
+    .content {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #ffe6f0;
+      border-radius: 12px;
       color: #880e4f;
-      font-family: 'Segoe UI', sans-serif;
-      position: relative;
-    }
-    .modal-content h2 {
-      margin-top: 0;
-      margin-bottom: 15px;
-    }
-    .modal-content p {
-      font-size: 1.1rem;
-      line-height: 1.5;
-    }
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      background: #d81b60;
-      border: none;
-      color: white;
+      font-weight: 600;
+      max-width: 400px;
+      box-shadow: 0 4px 10px rgba(216, 27, 96, 0.3);
       font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-      line-height: 27px;
-      user-select: none;
-      transition: background-color 0.3s ease;
     }
-    .close-btn:hover {
-      background-color: #ec407a;
+    /* Show content when checkbox is checked */
+    #toggle:checked + label + .content {
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div class="parent">
-    Coral reef bleaching
-    <button class="child-button" id="openModalBtn">Important Info</button>
+
+  <h2>Coral Bleaching</h2>
+
+  <!-- Hidden checkbox -->
+  <input type="checkbox" id="toggle" />
+  <!-- Label acts as a button -->
+  <label for="toggle">Click to see important info</label>
+
+  <!-- Content shown when checkbox is checked -->
+  <div class="content">
+    Coral bleaching happens when environmental stress causes corals to lose their color and turn white.
   </div>
 
-  <!-- Modal -->
-  <div class="modal" id="infoModal">
-    <div class="modal-content">
-      <button class="close-btn" id="closeModalBtn">&times;</button>
-      <h2>Coral Bleaching Info</h2>
-      <p>
-        Coral bleaching occurs when corals are stressed by changes in conditions such as temperature, light, or nutrients. This causes them to expel the symbiotic algae living in their tissues, turning them white.
-      </p>
-    </div>
-  </div>
-
-  <script>
-    const openBtn = document.getElementById('openModalBtn');
-    const closeBtn = document.getElementById('closeModalBtn');
-    const modal = document.getElementById('infoModal');
-
-    openBtn.addEventListener('click', () => {
-      modal.style.display = 'flex';
-    });
-
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-  </script>
 </body>
 </html>
+
