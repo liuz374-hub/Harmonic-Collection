@@ -1,63 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Coral World - Pink Theme</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #ffe6f0, #ff80ab);
-      color: #880e4f;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
+<meta charset="UTF-8" />
+<title>Simple Coral Fact</title>
+<style>
 
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-      text-shadow: 1px 1px 3px #d81b60;
-    }
+  #showFact {
+    display: none;
+  }
 
-    p {
-      font-size: 1.3em;
-      margin-bottom: 2em;
-      font-weight: 600;
-    }
+  label {
+    background-color: #d81b60;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    user-select: none;
+  }
 
-    button {
-      background-color: white;
-      color: #d81b60;
-      padding: 14px 28px;
-      border: none;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 1.1em;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(216, 27, 96, 0.4);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+  .fact {
+    display: none;
+    margin-top: 15px;
+    max-width: 350px;
+    padding: 12px;
+    background-color: #ffe6f0;
+    color: #880e4f;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 3px 8px rgba(216, 27, 96, 0.3);
+  }
 
-    button:hover {
-      background-color: #d81b60;
-      color: white;
-    }
-  </style>
+  #showFact:checked + label + .fact {
+    display: block;
+  }
+</style>
 </head>
 <body>
-  <h1>Discover Coral Bleaching</h1>
-  <p>Understand how changing ocean temperatures affect coral reefs worldwide.</p>
-  <button id="infoBtn">Click for a Quick Fact</button>
 
-  <script>
-    document.getElementById('infoBtn').addEventListener('click', () => {
-      alert("Did you know? Over 50% of the world's coral reefs have experienced bleaching in recent decades.");
-    });
-  </script>
+<h2>Coral Reef Threat</h2>
+
+<input type="checkbox" id="showFact" />
+<label for="showFact">Click for a quick fact</label>
+
+<div class="fact">
+  Chemicals like sunscreen ingredients can harm coral reefs too.
+</div>
+
 </body>
 </html>
+
