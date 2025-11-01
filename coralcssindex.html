@@ -7,45 +7,82 @@
   <title>Coral Bleaching</title>
   <style>
     body {
-      background-color: #ffe6f0;
-      font-family: Arial, sans-serif;
-      color: #880e4f;
-      padding: 40px 20px;
+      margin: 0;
+      padding: 0;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      color: #003366;
+      background: linear-gradient(to bottom right, #d6f3ff, #7fd3ff); 
+      background-size: 200% 200%;
+      animation: oceanFlow 10s ease-in-out infinite alternate;
+      text-align: center;
+      padding: 80px 20px 60px;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 0;
-      min-height: 100vh;
+    }
+
+    @keyframes oceanFlow {
+      0% { background-position: left top; }
+      100% { background-position: right bottom; }
+    }
+
+    .home-button {
+      display: inline-block;
+      font-size: 1.4rem;
+      color: #4b0082; 
+      text-decoration: underline;
+      margin-bottom: 30px;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    .home-button:hover {
+      color: #7b1fa2;
+      transform: translateY(-2px);
     }
 
     h1 {
       font-size: 3em;
       margin-bottom: 30px;
-      text-shadow: 2px 2px 6px #d81b60;
+      color: #004d73;
+      text-shadow: 2px 2px 6px rgba(0, 80, 130, 0.3);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     .content-box {
       max-width: 600px;
-      background: #fff0f5;
+      background: rgba(255, 255, 255, 0.8);
       padding: 25px 30px;
       border-radius: 20px;
-      box-shadow: 0 0 15px rgba(216, 27, 96, 0.3);
-      border: 3px solid #d81b60;
-      color: #4a0033;
-      font-size: 1.15em;
-      line-height: 1.6;
+      box-shadow: 0 0 15px rgba(0, 100, 180, 0.25);
+      border-left: 6px solid #0099cc;
+      text-align: left;
+      font-size: 1.1em;
+      line-height: 1.7;
+      color: #002a40;
+      animation: fadeIn 2.5s ease-in-out;
     }
 
     .content-box i {
       display: block;
       margin-bottom: 15px;
       font-style: italic;
-      color: #aa3d6f;
+      color: #006699;
       text-align: center;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     a {
-      color: #d81b60;
+      color: #006bb3;
       text-decoration: none;
       font-weight: bold;
     }
@@ -57,13 +94,18 @@
 </head>
 
 <body>
+ 
+  <a href="https://liuz374-hub.github.io/Harmonic-Collection/summary2.html" class="home-button">Home</a>
+
   <h1>Coral Bleaching</h1>
 
   <div class="content-box">
     <i>From Wikipedia, the free encyclopedia</i>
 
     <p>
-      Coral bleaching happens when corals lose the tiny algae that live inside them. These algae give corals their color and food. When the water gets too warm or polluted, corals become stressed and turn white.
+      Coral bleaching happens when corals lose the tiny algae that live inside them.
+      These algae give corals their color and food. When the water gets too warm or polluted,
+      corals become stressed and turn white.
     </p>
 
     <p>
@@ -71,7 +113,9 @@
     </p>
 
     <p>
-      <a href="https://en.wikipedia.org/wiki/Coral_bleaching" target="_blank">Learn more about Coral Bleaching</a>
+      <a href="https://en.wikipedia.org/wiki/Coral_bleaching" target="_blank">
+        Learn more about Coral Bleaching
+      </a>
     </p>
   </div>
 </body>
