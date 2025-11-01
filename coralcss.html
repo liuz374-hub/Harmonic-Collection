@@ -2,51 +2,161 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Simple Coral Fact</title>
+<title>Coral Reef Threat</title>
 <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(to bottom right, #d6f3ff, #7fd3ff);
+    background-size: 200% 200%;
+    animation: oceanFlow 10s ease-in-out infinite alternate;
+    text-align: center;
+    color: #00334d;
+    min-height: 100vh;
+  }
 
+  @keyframes oceanFlow {
+    0% { background-position: left top; }
+    100% { background-position: right bottom; }
+  }
+
+
+  .home-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.6em;
+    color: #005f99;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .home-link:hover {
+    color: #0088cc;
+  }
+
+  h2 {
+    font-size: 2.5em;
+    color: #004d73;
+    text-shadow: 2px 2px 6px rgba(0, 90, 140, 0.3);
+    margin-top: 50px;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* 隐藏checkbox */
   #showFact {
     display: none;
   }
 
+  /* 点击按钮 */
   label {
-    background-color: #d81b60;
+    background-color: #0099cc;
     color: white;
     padding: 12px 25px;
-    border-radius: 12px;
+    border-radius: 15px;
     cursor: pointer;
     font-weight: bold;
     font-size: 1.1rem;
     user-select: none;
+    box-shadow: 0 4px 10px rgba(0, 90, 160, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
   }
 
+  label:hover {
+    background-color: #00b8e6;
+    transform: translateY(-2px);
+  }
+
+ 
   .fact {
     display: none;
-    margin-top: 15px;
-    max-width: 350px;
-    padding: 12px;
-    background-color: #ffe6f0;
-    color: #880e4f;
-    border-radius: 10px;
-    font-weight: 600;
-    box-shadow: 0 3px 8px rgba(216, 27, 96, 0.3);
+    margin: 25px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #002a40;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.8;
+    box-shadow: 0 4px 12px rgba(0, 100, 180, 0.3);
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
   }
 
   #showFact:checked + label + .fact {
     display: block;
   }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fact h3 {
+    color: #005f99;
+    margin-top: 10px;
+  }
+
+  .fact ul {
+    margin-left: 20px;
+  }
+
+  a {
+    color: #007acc;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 </style>
 </head>
 <body>
 
-<h2>Coral Reef Threat</h2>
 
-<input type="checkbox" id="showFact" />
-<label for="showFact">Click for a quick fact</label>
+  <a href="https://liuz374-hub.github.io/Harmonic-Collection/summary2.html" class="home-link">Home</a>
 
-<div class="fact">
-  Chemicals like sunscreen ingredients can harm coral reefs too.
-</div>
+  <h2>Coral Reef Threat</h2>
+
+
+  <input type="checkbox" id="showFact" />
+  <label for="showFact">Click for important facts</label>
+
+  <div class="fact">
+    <h3>🌊 Major Threats to Coral Reefs</h3>
+    <ul>
+      <li><strong>Climate Change:</strong> Warmer ocean temperatures lead to coral bleaching and death.</li>
+      <li><strong>Pollution:</strong> Chemicals, plastic waste, and runoff from land damage coral health.</li>
+      <li><strong>Overfishing:</strong> Disrupts the balance of reef ecosystems.</li>
+      <li><strong>Tourism:</strong> Physical contact, anchors, and sunscreen chemicals harm corals.</li>
+    </ul>
+
+    <h3>☀️ Sunscreen Impact</h3>
+    <p>
+      Some sunscreens contain chemicals such as <strong>oxybenzone</strong> and <strong>octinoxate</strong> 
+      that are toxic to corals even in small amounts. They can cause coral bleaching, DNA damage, and deformities in coral larvae.
+    </p>
+
+    <p>
+      🌿 Tip: Choose <strong>reef-safe sunscreen</strong> when swimming or diving to help protect our oceans!
+    </p>
+
+    <p>
+      Learn more on 
+      <a href="https://en.wikipedia.org/wiki/Threats_to_coral_reefs" target="_blank">
+        Wikipedia: Threats to Coral Reefs
+      </a>
+    </p>
+  </div>
 
 </body>
 </html>
