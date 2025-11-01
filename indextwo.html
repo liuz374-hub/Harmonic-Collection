@@ -5,31 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>What is Coral Bleaching?</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
     body {
-      background-color: #ffe6f0;
-      color: #880e4f;
-      font-family: Arial, sans-serif;
-      padding: 30px;
+      margin: 0;
+      font-family: 'Fredoka', sans-serif;
+      background: linear-gradient(to bottom, #b3e5ff, #66ccff);
+      color: #00334d;
       text-align: center;
+      padding: 80px 20px 40px;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
     }
+
     h1 {
-      font-size: 2.8em;
+      font-weight: 600;
+      font-size: 2.8rem;
       margin-bottom: 20px;
+      color: #00334d;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
     }
-    h2 {
-      color: #d81b60;
-      margin-bottom: 20px;
+
+    p {
+      font-weight: 400;
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto 50px;
+      color: #004d80;
     }
-    img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(216, 27, 96, 0.3);
+
+    a.home-button {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      padding: 12px 32px;
+      background-color: #ff99cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      box-shadow: 0 6px 0 #ff6fa8;
+      transition: all 0.2s ease-in-out;
+      user-select: none;
+    }
+
+    a.home-button:hover {
+      background-color: #ff66a3;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 0 #ff4f94;
+    }
+
+    a.home-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 4px 0 #ff4f94;
     }
   </style>
 </head>
 <body>
+  <a href="summary2.html"home-button">Home</a>
+
   <h1>What is Coral Bleaching?</h1>
-  <h2>Coral bleaching does not equal coral death</h2>
-  <img src="image/coral.png" alt="Coral Image" />
+  <p>Coral bleaching happens when corals lose the algae that live in their tissues, turning them white. Bleached corals are stressed but can recover if conditions improve.</p>
 </body>
 </html>
+
