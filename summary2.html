@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coral Reef Home</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background: linear-gradient(180deg, #b3e5ff, #66ccff, #0088cc);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 2s ease-in-out;
+      min-height: 100vh;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    a {
+      display: inline-block;
+      padding: 14px 30px;
+      background: linear-gradient(145deg, #00bfff, #007acc);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      box-shadow: 0 6px 0 #006bb3;
+      transition: all 0.25s ease-in-out;
+    }
+
+    a:hover {
+      background: linear-gradient(145deg, #33ccff, #0099e6);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 0 #005f99;
+    }
+
+    a:active {
+      transform: translateY(2px);
+      box-shadow: 0 4px 0 #005f99;
+    }
+
+    footer {
+      margin-top: 80px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+      animation: fadeIn 4s ease-in-out;
+    }
+
+   
+    .wave {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 120px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 100% 100% 0 0;
+      animation: waveMove 10s linear infinite;
+      transform: translateX(-25%);
+      z-index: -1;
+    }
+
+    @keyframes waveMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+  <h1> Coral Reef </h1>
+
+  <ul>
+    <li><a href="https://liuz374-hub.github.io/Harmonic-Collection/" target="_blank">September 9</a></li>
+    <li><a href="https://liuz374-hub.github.io/Harmonic-Collection/indextwo.html" target="_blank">September 16</a></li>
+    <li><a href="https://liuz374-hub.github.io/Harmonic-Collection/coralcssindex.html" target="_blank">September 23</a></li>
+    <li><a href="https://liuz374-hub.github.io/Harmonic-Collection/position.html" target="_blank">September 30</a></li>
+    <li><a href="https://liuz374-hub.github.io/Harmonic-Collection/coralcss.html" target="_blank">October 7</a></li>
+    <li><a href="https://liuz374-hub.github.io/Harmonic-Collection/wk6.html" target="_blank">October 14</a></li>
+  </ul>
+
+  <div class="wave"></div>
+</body>
+</html>
