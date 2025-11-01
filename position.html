@@ -2,62 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Pure HTML + CSS Click to Show Content</title>
+  <title>Coral Bleaching — Learn More</title>
   <style>
-    /* Hide the checkbox */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      background: linear-gradient(to bottom right, #d6f3ff, #7fd3ff);
+      background-size: 200% 200%;
+      animation: oceanFlow 10s ease-in-out infinite alternate;
+      text-align: center;
+      color: #00334d;
+      min-height: 100vh;
+    }
+
+    @keyframes oceanFlow {
+      0% { background-position: left top; }
+      100% { background-position: right bottom; }
+    }
+
+   
+    .home-link {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 1.6em;
+      color: #005f99;
+      text-decoration: underline;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .home-link:hover {
+      color: #0088cc;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      color: #004d73;
+      text-shadow: 2px 2px 6px rgba(0, 90, 140, 0.3);
+      margin-top: 50px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
     #toggle {
       display: none;
     }
-    /* Style the label as a button */
+
     label {
-      background-color: #d81b60;
+      background-color: #0099cc;
       color: white;
-      padding: 10px 15px;
-      border-radius: 12px;
+      padding: 12px 20px;
+      border-radius: 15px;
       cursor: pointer;
       user-select: none;
       font-weight: 700;
       font-size: 1rem;
       display: inline-block;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
+      margin-top: 25px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 90, 160, 0.3);
     }
+
     label:hover {
-      background-color: #ec407a;
+      background-color: #00b8e6;
+      transform: translateY(-2px);
     }
-    /* Hidden content by default */
+
     .content {
       display: none;
-      margin-top: 15px;
-      padding: 15px;
-      background-color: #ffe6f0;
-      border-radius: 12px;
-      color: #880e4f;
-      font-weight: 600;
-      max-width: 400px;
-      box-shadow: 0 4px 10px rgba(216, 27, 96, 0.3);
-      font-size: 1.2rem;
+      margin: 20px auto;
+      padding: 20px 25px;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
+      color: #00334d;
+      font-weight: 500;
+      max-width: 600px;
+      box-shadow: 0 4px 12px rgba(0, 100, 180, 0.3);
+      font-size: 1.1rem;
+      text-align: left;
+      line-height: 1.8;
+      animation: fadeIn 1s ease-in-out;
     }
-    /* Show content when checkbox is checked */
+
     #toggle:checked + label + .content {
       display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .content h3 {
+      color: #005f99;
+      margin-top: 10px;
+    }
+
+    .content ul {
+      margin-left: 20px;
+    }
+
+    a {
+      color: #007acc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <h2>Coral Bleaching</h2>
+ 
+  <a href="https://liuz374-hub.github.io/Harmonic-Collection/summary2.html" class="home-link">Home</a>
 
-  <!-- Hidden checkbox -->
+  <h2>Coral Bleaching</h2>
+=
   <input type="checkbox" id="toggle" />
-  <!-- Label acts as a button -->
   <label for="toggle">Click to see important info</label>
 
-  <!-- Content shown when checkbox is checked -->
   <div class="content">
-    Coral bleaching happens when environmental stress causes corals to lose their color and turn white.
+    <h3>🌊 What is Coral Bleaching?</h3>
+    <p>
+      Coral bleaching occurs when corals expel the symbiotic algae (<i>zooxanthellae</i>) living in their tissues.
+      These algae provide corals with food and their vibrant colors.
+      Without them, corals turn white and become more vulnerable to disease and death.
+    </p>
+
+    <h3>💧 Main Causes</h3>
+    <ul>
+      <li>Rising ocean temperatures due to global warming</li>
+      <li>Pollution and poor water quality</li>
+      <li>Increased solar radiation (especially UV)</li>
+      <li>Extreme low tides</li>
+    </ul>
+
+    <h3>🐠 Why It Matters</h3>
+    <p>
+      Coral reefs support about <strong>25% of all marine life</strong>.
+      When corals bleach and die, entire ecosystems are affected — including fish, sea turtles, and even humans who rely on reefs for food and tourism.
+    </p>
+
+    <p>
+      Learn more on 
+      <a href="https://en.wikipedia.org/wiki/Coral_bleaching" target="_blank">
+        Wikipedia: Coral Bleaching
+      </a>
+    </p>
   </div>
 
 </body>
 </html>
+
 
