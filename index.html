@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>This is a world of coral reef</title>
   <style>
-  
     body {
       margin: 0;
       padding: 0;
       font-family: "Trebuchet MS", Arial, sans-serif;
       color: #00334d;
-      background: linear-gradient(to bottom right, #a7e0ff, #005f99);
+      background: linear-gradient(to bottom right, #c6ecff, #6fc3ff); 
       background-size: 200% 200%;
       animation: oceanMove 10s ease-in-out infinite alternate;
       line-height: 1.8;
@@ -24,36 +23,27 @@
       100% { background-position: right bottom; }
     }
 
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(0, 105, 148, 0.9);
-      padding: 10px 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-      z-index: 1000;
+    
+    .home-button {
+      display: inline-block;
+      position: relative;
+      top: 10px;
+      font-size: 1.4rem;
+      color: #4b0082;
+      text-decoration: underline;
+      margin-bottom: 30px;
+      transition: color 0.3s ease, transform 0.2s ease;
     }
 
-    header a {
-      color: #e0f7ff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 20px;
-      border: 2px solid #e0f7ff;
-      border-radius: 20px;
-      transition: 0.3s;
-    }
-
-    header a:hover {
-      background-color: #e0f7ff;
-      color: #005f99;
+    .home-button:hover {
+      color: #7b1fa2; 
+      transform: translateY(-2px);
     }
 
     h1 {
       font-size: 2.8em;
       color: #003366;
-      margin-top: 60px;
+      margin-top: 40px;
       text-shadow: 2px 2px 5px rgba(255,255,255,0.4);
       animation: float 4s ease-in-out infinite;
     }
@@ -105,10 +95,7 @@
 </head>
 <body>
 
- <header>
-  <a href="https://liuz374-hub.github.io/Harmonic-Collection/summary2.html"> Home</a>
-</header>
-
+  <a href="https://liuz374-hub.github.io/Harmonic-Collection/summary2.html" class="home-button">Home</a>
 
   <h1>Coral Reef</h1>
   <h2>What is a coral reef?</h2>
@@ -124,7 +111,7 @@
 
   <p>
     <a href="https://en.wikipedia.org/wiki/Coral_reef" target="_blank">
-      🌐 Learn more on Wikipedia
+       Learn more on Wikipedia
     </a>
   </p>
 
