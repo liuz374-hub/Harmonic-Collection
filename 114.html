@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coral Communication</title>
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #aee6ff, #0077b6);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: #004466;
+      text-align: center;
+      position: relative;
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 150px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 100%;
+      animation: waveMove 6s ease-in-out infinite alternate;
+    }
+    .wave:nth-of-type(2) {
+      background: rgba(255, 255, 255, 0.3);
+      animation-delay: 2s;
+      height: 120px;
+    }
+    .wave:nth-of-type(3) {
+      background: rgba(255, 255, 255, 0.2);
+      animation-delay: 4s;
+      height: 100px;
+    }
+
+    @keyframes waveMove {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .home-link {
+      position: absolute;
+      top: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #4b0082;
+      text-decoration: underline;
+      font-size: 1.4rem;
+      font-weight: 600;
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+      transition: color 0.25s ease, transform 0.15s ease;
+      z-index: 10;
+    }
+    .home-link:hover {
+      color: #7b1fa2;
+      transform: translateX(-50%) translateY(-2px);
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      animation: float 4s ease-in-out infinite;
+      color: #00334d;
+      text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.6);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 25px 35px;
+      border-radius: 18px;
+      max-width: 600px;
+      box-shadow: 0 6px 15px rgba(0, 80, 130, 0.3);
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 10px;
+      color: #00334d;
+    }
+
+    .highlight {
+      color: #0077b6;
+      font-weight: bold;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: 0;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      animation: rise 6s infinite ease-in;
+      opacity: 0.8;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(0) scale(0.8); opacity: 0.8; }
+      100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
+    }
+
+    .bubble:nth-of-type(4) { left: 10%; animation-delay: 1s; width: 15px; height: 15px; }
+    .bubble:nth-of-type(5) { left: 30%; animation-delay: 3s; width: 10px; height: 10px; }
+    .bubble:nth-of-type(6) { left: 60%; animation-delay: 0.5s; width: 25px; height: 25px; }
+    .bubble:nth-of-type(7) { left: 80%; animation-delay: 2s; width: 18px; height: 18px; }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      color: #00334d;
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 480px) {
+      .home-link { font-size: 1.1rem; top: 18px; }
+      h1 { font-size: 1.9rem; }
+      .card { padding: 18px; margin: 0 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="https://liuz374-hub.github.io/Harmonic-Collection/summary2.html" class="home-link">Home</a>
+
+  <h1>Coral Communication</h1>
+
+  <div class="card">
+    <p>
+      Corals don’t have voices, yet they <span class="highlight">communicate</span> through chemistry and light.
+      They release tiny chemical signals to attract algae partners or warn nearby colonies of stress.
+    </p>
+    <p>
+      At night, bioluminescent patterns ripple across some reefs —
+      a silent conversation glowing beneath the waves.
+    </p>
+    <p>
+      Scientists are learning that coral reefs act almost like a <span class="highlight">neural network</span>,
+      where every polyp, fish, and microbe plays a part in the ocean’s shared intelligence.
+    </p>
+  </div>
+
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
+  <footer>
+    The ocean speaks softly — we just need to learn how to listen. 🌊
+  </footer>
+
+</body>
+</html>
