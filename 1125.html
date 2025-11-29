@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A Fading Ocean</title>
+
+<style>
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(140deg, #74c7ff, #004b6b);
+    height: 100vh;
+    overflow: hidden;
+    color: #e3f7ff;
+    text-align: center;
+    animation: fadeIn 2.5s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .home-link {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e3faff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: underline;
+    z-index: 20;
+    transition: opacity 0.3s ease;
+  }
+
+  .home-link:hover {
+    opacity: 0.75;
+  }
+
+
+
+  .light {
+    position: absolute;
+    top: 0;
+    left: -20%;
+    width: 150%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.13);
+    transform: skewX(-20deg);
+    animation: moveLight 7s ease-in-out infinite alternate;
+  }
+
+  @keyframes moveLight {
+    0%   { transform: translateX(-10%) skewX(-20deg); }
+    100% { transform: translateX(10%) skewX(-20deg); }
+  }
+
+
+
+  h1 {
+    margin-top: 110px;
+    font-size: 3rem;
+    text-shadow: 2px 2px 18px rgba(0,0,0,0.4);
+    animation: softFloat 5s ease-in-out infinite;
+    letter-spacing: 2px;
+  }
+
+  @keyframes softFloat {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-12px); }
+  }
+
+
+  
+  .text-box {
+    max-width: 650px;
+    margin: 35px auto;
+    font-size: 1.15rem;
+    line-height: 1.75;
+    font-weight: 300;
+    padding: 0 20px;
+  }
+
+
+
+  .coral {
+    font-size: 2.8rem;
+    margin-top: 40px;
+    filter: blur(0px);
+    animation: fadeCoral 7s infinite alternate ease-in-out;
+  }
+
+  @keyframes fadeCoral {
+    0%   { opacity: 1; filter: blur(0px); }
+    100% { opacity: 0.35; filter: blur(3px); }
+  }
+
+
+  .particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    animation: drift 9s infinite linear;
+  }
+
+  @keyframes drift {
+    from { transform: translateY(0) translateX(0); opacity: 0.9; }
+    to   { transform: translateY(-110vh) translateX(20px); opacity: 0; }
+  }
+
+ 
+  .p1 { left: 20%; bottom: -10px; animation-delay: 0s; }
+  .p2 { left: 45%; bottom: -20px; animation-delay: 2.2s; }
+  .p3 { left: 70%; bottom: -15px; animation-delay: 1s; }
+  .p4 { left: 85%; bottom: -30px; animation-delay: 3.4s; }
+  .p5 { left: 10%; bottom: -25px; animation-delay: 4s; }
+
+</style>
+</head>
+
+<body>
+
+
+  <a class="home-link"
+     href="https://liuz374-hub.github.io/Harmonic-Collection/summary2.html">
+     Home
+  </a>
+
+
+  <div class="light"></div>
+
+
+  <h1>A Fading Ocean</h1>
+
+
+  <div class="text-box">
+    Coral bleaching does not happen all at once.
+    It spreads slowly across a reef, as warming water forces tiny algae—
+    the coral’s lifeline—to leave their hosts.
+    <br><br>
+    Without these algae, the reef loses both its color and its strength,
+    becoming pale, fragile, and unable to grow.
+    <br><br>
+    Scientists compare it to “a heartbeat slowing down under stress.”
+    But recovery is still possible—if the ocean cools, and if we act.
+  </div>
+
+  
+  <div class="coral">🪸</div>
+
+  <div class="particle p1"></div>
+  <div class="particle p2"></div>
+  <div class="particle p3"></div>
+  <div class="particle p4"></div>
+  <div class="particle p5"></div>
+
+</body>
+</html>
