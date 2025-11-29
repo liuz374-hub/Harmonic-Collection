@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Harmonic Collection</title>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #6ec6ff, #015ea0);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00334d;
+    position: relative;
+  }
+
+  /* ---------------- Bubble Background ---------------- */
+
+  .bg-bubble {
+    position: absolute;
+    bottom: -50px;
+    background: rgba(255,255,255,0.65);
+    border-radius: 50%;
+    animation: rise 7s infinite ease-in;
+    opacity: 0.9;
+    filter: blur(1px);
+  }
+
+  /* Different small bubbles */
+  .bg-bubble:nth-child(1) { left: 10%; width: 18px; height: 18px; animation-delay: 1s; }
+  .bg-bubble:nth-child(2) { left: 25%; width: 12px; height: 12px; animation-delay: 0.5s; }
+  .bg-bubble:nth-child(3) { left: 45%; width: 22px; height: 22px; animation-delay: 2.5s; }
+  .bg-bubble:nth-child(4) { left: 70%; width: 14px; height: 14px; animation-delay: 1.8s; }
+  .bg-bubble:nth-child(5) { left: 85%; width: 20px; height: 20px; animation-delay: 3.2s; }
+
+  @keyframes rise {
+    0% { transform: translateY(0) scale(0.7); opacity: 0.7; }
+    100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+  }
+
+
+
+
+  .nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 80%;
+    max-width: 700px;
+    z-index: 10;
+  }
+
+  .nav-bubble {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #ffffffcc, #dff3ffcc);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #00334d;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .nav-bubble:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  }
+
+  .emoji {
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+  }
+
+  h1 {
+    position: absolute;
+    top: 30px;
+    color: #ffffffee;
+    font-size: 2.8rem;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+</style>
+</head>
+
+<body>
+
+<h1>Coral reef Bleaching</h1>
+
+<!-- Background bubbles -->
+<div class="bg-bubble"></div>
+<div class="bg-bubble"></div>
+<div class="bg-bubble"></div>
+<div class="bg-bubble"></div>
+<div class="bg-bubble"></div>
+
+<!-- Navigation bubbles -->
+<div class="nav-container">
+
+  <a class="nav-bubble" href="https://liuz374-hub.github.io/Harmonic-Collection/" target="_blank">
+    <div class="emoji">🐚</div>
+    Sep 9
+  </a>
+
+  <a class="nav-bubble" href="https://liuz374-hub.github.io/Harmonic-Collection/indextwo.html" target="_blank">
+    <div class="emoji">🐠</div>
+    Sep 16
+  </a>
+
+  <a class="nav-bubble" href="https://liuz374-hub.github.io/Harmonic-Collection/coralcssindex.html" target="_blank">
+    <div class="emoji">🌊</div>
+    Sep 23
+  </a>
+
+  <a class="nav-bubble" href="https://liuz374-hub.github.io/Harmonic-Collection/position.html" target="_blank">
+    <div class="emoji">🪸</div>
+    Sep 30
+  </a>
+
+  <a class="nav-bubble" href="https://liuz374-hub.github.io/Harmonic-Collection/coralcss.html" target="_blank">
+    <div class="emoji">🐬</div>
+    Oct 7
+  </a>
+
+  <a class="nav-bubble" href="https://liuz374-hub.github.io/Harmonic-Collection/wk6.html" target="_blank">
+    <div class="emoji">🫧</div>
+    Oct 14
+  </a>
+
+  <a class="nav-bubble" href="https://liuz374-hub.github.io/Harmonic-Collection/1028.html" target="_blank">
+    <div class="emoji">🐟</div>
+    Oct 28
+  </a>
+
+  <a class="nav-bubble" href="https://liuz374-hub.github.io/Harmonic-Collection/114.html" target="_blank">
+    <div class="emoji">🦪</div>
+    Nov 4
+  </a>
+
+  <a class="nav-bubble" href="https://liuz374-hub.github.io/Harmonic-Collection/1111.html" target="_blank">
+    <div class="emoji">🐋</div>
+    Nov 11
+  </a>
+
+  <a class="nav-bubble" href="https://liuz374-hub.github.io/Harmonic-Collection/1125.html" target="_blank">
+    <div class="emoji">🪼</div>
+    Nov 25
+  </a>
+
+</div>
+
+</body>
+</html>
