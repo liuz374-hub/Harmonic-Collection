@@ -17,7 +17,6 @@
     position: relative;
   }
 
- 
   .home-link {
     position: absolute;
     top: 28px;
@@ -35,7 +34,6 @@
     transform: translateX(-50%) translateY(-2px);
   }
 
-
   .container {
     display: flex;
     width: 100%;
@@ -48,7 +46,6 @@
     position: relative;
     z-index: 10;
   }
-
 
   .left {
     flex: 1.1;
@@ -83,7 +80,6 @@
     50% { transform: scale(1.2); opacity: 1; }
   }
 
-
   .right {
     flex: 1.3;
     font-size: 1.15rem;
@@ -97,7 +93,6 @@
     font-weight: bold;
   }
 
- 
   .bubble {
     position: absolute;
     bottom: -40px;
@@ -138,6 +133,24 @@
       font-size: 2.2rem;
     }
   }
+
+  /* === 新增左右角emoji按钮 === */
+  .bottom-left-emoji, .bottom-right-emoji {
+    position: fixed;
+    bottom: 20px;
+    font-size: 2.4rem;
+    text-decoration: none;
+    z-index: 50;
+    transition: transform 0.2s ease;
+  }
+
+  .bottom-left-emoji { left: 22px; }
+  .bottom-right-emoji { right: 22px; }
+
+  .bottom-left-emoji:hover,
+  .bottom-right-emoji:hover {
+    transform: translateY(-4px);
+  }
 </style>
 </head>
 
@@ -169,5 +182,12 @@
 <div class="bubble"></div>
 <div class="bubble"></div>
 
+
+<a href="https://liuz374-hub.github.io/Harmonic-Collection/114.html" class="bottom-left-emoji">🦪</a>
+
+
+<a href="https://liuz374-hub.github.io/Harmonic-Collection/1125.html" class="bottom-right-emoji">🪼</a>
+
 </body>
 </html>
+
